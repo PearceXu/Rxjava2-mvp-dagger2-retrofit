@@ -44,7 +44,7 @@
   "Success": true
 }
 
-## 代码示例：
+## 网络请求封装代码示例：
 ### 自带进度加载圈
 ```java
 ApiClient.getApiService(ApiService.MainService.class)
