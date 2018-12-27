@@ -4,7 +4,8 @@
 ### 觉得好用的同学请右上角随手star 一下，谢谢！
 
 ### 将retorfit2 与 rx2 进行封装 提供自带 progress 的 Observer
-## mvp解耦
+## mvp解耦 
+### 具体实现请下载代码查看（记得给我个小星星）
 ```java  
     //View层注入
     @Inject
@@ -17,10 +18,10 @@
 ```java
     //Presenter层注入
     @Inject
-    IMVP.IMainView mView;
+    IMVP.IMainView mView;// 声明接口
 
     @Inject
-    IMVP.IMainModule mModule;
+    IMVP.IMainModule mModule;// 声明接口
    
       DaggerMainConponent// 注入
                 .create()
