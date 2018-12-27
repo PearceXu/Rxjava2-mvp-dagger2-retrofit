@@ -4,6 +4,30 @@
 ### 觉得好用的同学请右上角随手star 一下，谢谢！
 
 ### 将retorfit2 与 rx2 进行封装 提供自带 progress 的 Observer
+## mvp解耦
+```java  
+    //View层注入
+    @Inject
+    IMVP.IMainPresenter mPresenter;// 声明接口
+    
+        DaggerMainConponent// 注入实现类
+                .create()
+                .inject(this);
+```
+```java
+    //Presenter层注入
+    @Inject
+    IMVP.IMainView mView;
+
+    @Inject
+    IMVP.IMainModule mModule;
+   
+      DaggerMainConponent// 注入
+                .create()
+                .inject(this);
+```
+
+
 ### 如果需要实现这种数据处理只需要重写消费者使用泛型写，这个项目里暂时不加上这个
 {
   "Data": [
