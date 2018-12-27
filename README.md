@@ -1,10 +1,10 @@
-#Rxjava2-mvp-dagger2-retrofit
-#实现真正解耦的mvp 架构，可用于初始项目框架
+# Rxjava2-mvp-dagger2-retrofit
+# 实现真正解耦的mvp 架构，可用于初始项目框架
 
-#觉得好用的同学请右上角随手star 一下，谢谢！
+# 觉得好用的同学请右上角随手star 一下，谢谢！
 
-#同时将retorfit 与 rx2 进行封装 提供自带progress 的Resumer
-#如果需要实现这种数据处理只需要重写消费者使用泛型写，这个项目里暂时不加上这个
+# 同时将retorfit 与 rx2 进行封装 提供自带progress 的Resumer
+# 如果需要实现这种数据处理只需要重写消费者使用泛型写，这个项目里暂时不加上这个
 {
   "Data": [
     {
@@ -19,8 +19,8 @@
   "Success": true
 }
 
-#代码示例：
-#自带进度加载圈
+# 代码示例：
+# 自带进度加载圈
 ```java
 ApiClient.getApiService(ApiService.MainService.class)
                 .getInfo("北京")
@@ -33,7 +33,7 @@ ApiClient.getApiService(ApiService.MainService.class)
                     }
                 }));
 ```
-#不带进度加载圈\n
+# 不带进度加载圈\n
 ```java
 ApiClient.getApiService(ApiService.MainService.class)
                 .getInfo("北京")
@@ -46,7 +46,7 @@ ApiClient.getApiService(ApiService.MainService.class)
                     }
                 },null));
 ```
-  #统一异常处理
+  # 统一异常处理
   ```java
  @Override
    public void catchException(Throwable e) {
