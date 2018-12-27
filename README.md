@@ -3,7 +3,7 @@
 
 ### 觉得好用的同学请右上角随手star 一下，谢谢！
 
-### 同时将retorfit 与 rx2 进行封装 提供自带progress 的Resumer
+### 同时将retorfit 与 rx2 进行封装 提供自带progress 的 Observer
 ### 如果需要实现这种数据处理只需要重写消费者使用泛型写，这个项目里暂时不加上这个
 {
   "Data": [
