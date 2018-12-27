@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">devLib</string>
+    <string name="no_network">没有网络</string>
+    <string name="loading">正在加载</string>
+</resources>
