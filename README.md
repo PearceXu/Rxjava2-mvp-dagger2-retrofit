@@ -4,7 +4,7 @@
 ### 觉得好用的同学请右上角随手star 一下，谢谢！
 
 ### 将retrofit2 与 rx2 进行封装 提供自带 progress 的 Observer
-## mvp解耦 
+## mvp解耦 ：
 ### 具体实现请下载代码查看（记得给我个小星星）
 ```java  
     //View层注入
