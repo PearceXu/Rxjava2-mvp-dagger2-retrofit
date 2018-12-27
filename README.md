@@ -11,7 +11,7 @@
     @Inject
     IMVP.IMainPresenter mPresenter;// 声明接口
     
-        DaggerMainConponent// 注入实现类
+        DaggerMainConponent// 注入
                 .create()
                 .inject(this);
 ```
