@@ -21,7 +21,7 @@
 
 #代码示例：\n
 #自带进度加载圈\n
-  ApiClient.getApiService(ApiService.MainService.class)
+#ApiClient.getApiService(ApiService.MainService.class)
                 .getInfo("北京")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -31,8 +31,8 @@
 
                     }
                 }));
-不带进度加载圈\n
- ApiClient.getApiService(ApiService.MainService.class)
+#不带进度加载圈\n
+# ApiClient.getApiService(ApiService.MainService.class)
                 .getInfo("北京")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -43,8 +43,8 @@
                     }
                 },null));
   #统一异常处理\n
-     @Override
-    public void catchException(Throwable e) {
+    # @Override
+   # public void catchException(Throwable e) {
         if (e instanceof SocketTimeoutException) {
             //"网络中断，请检查您的网络状态"
         } else if (e instanceof SocketException || e instanceof UnknownHostException) {
