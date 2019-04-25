@@ -1,0 +1,10 @@
+.gradle
+.idea
+*.iml
+app/app.iml
+gradle
+devlib/devlib.iml
+gradlew
+gradlew.bat
+local.properties
+***.iml

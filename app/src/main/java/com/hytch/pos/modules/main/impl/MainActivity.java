@@ -7,6 +7,7 @@ import com.hytch.pos.R;
 import com.hytch.pos.base.activity.BaseActivity;
 import com.hytch.pos.modules.main.IMVP;
 import com.hytch.pos.modules.main.dagger.DaggerMainConponent;
+import com.hytch.pos.modules.main.dagger.MainModule;
 
 import javax.inject.Inject;
 
@@ -24,9 +25,10 @@ public class MainActivity extends BaseActivity implements IMVP.IMainView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DaggerMainConponent
-                .create()
+                .builder()
+                .mainModule(new MainModule(this))
+                .build()
                 .inject(this);
-        mPresenter.get();
     }
 
     @Override
@@ -37,6 +39,7 @@ public class MainActivity extends BaseActivity implements IMVP.IMainView {
     @Override
     protected void onResume() {
         super.onResume();
+        mPresenter.get();
     }
 
     @Override
@@ -45,9 +48,5 @@ public class MainActivity extends BaseActivity implements IMVP.IMainView {
 
     @Override
     public void stopLoadding() {
-    }
-
-    public static IMVP.IMainView provideView(){
-        return (IMVP.IMainView)mActivity;
     }
 }

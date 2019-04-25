@@ -16,10 +16,19 @@ import dagger.Provides;
  */
 @Module
 public class MainModule {
+    IMVP.IMainView mView;
+
+    public MainModule() {
+    }
+
+    public MainModule(IMVP.IMainView mView) {
+        this.mView = mView;
+    }
+
     @Singleton
     @Provides
     public IMVP.IMainView provideView(){
-        return MainActivity.provideView();
+        return mView;
     }
 
     @Singleton
