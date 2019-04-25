@@ -28,7 +28,7 @@ public class MainModule {
     @Singleton
     @Provides
     public IMVP.IMainView provideView(){
-        return mView;
+        return mView == null? (IMVP.IMainView) MainActivity.privideViewByKey(MainActivity.class.getName()):mView;
     }
 
     @Singleton

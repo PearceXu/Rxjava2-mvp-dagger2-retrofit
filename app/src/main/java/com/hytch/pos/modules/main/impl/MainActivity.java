@@ -25,10 +25,14 @@ public class MainActivity extends BaseActivity implements IMVP.IMainView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DaggerMainConponent
-                .builder()
-                .mainModule(new MainModule(this))
-                .build()
+                .create()
                 .inject(this);
+        // 第二种注入方式
+//        DaggerMainConponent
+//                .builder()
+//                .mainModule(new MainModule(this))
+//                .build()
+//                .inject(this);
     }
 
     @Override
@@ -49,4 +53,6 @@ public class MainActivity extends BaseActivity implements IMVP.IMainView {
     @Override
     public void stopLoadding() {
     }
+
+
 }

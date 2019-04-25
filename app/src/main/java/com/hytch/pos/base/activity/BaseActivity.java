@@ -57,4 +57,8 @@ public abstract class BaseActivity extends AppCompatActivity implements LoadingV
     public void showToast(int resId){
         Toast.makeText(this,getString(resId),Toast.LENGTH_SHORT).show();
     }
+
+    public static Activity privideViewByKey(String key){
+        return mActivitys.get(key);
+    }
 }
